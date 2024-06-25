@@ -1,5 +1,6 @@
+**Video to GIF Converter**
 
-My project, "Video to GIF Converter," is a web application built using Flask that allows users to upload a video file and convert it into a GIF. The application also extracts the audio from the video, uses speech recognition to convert the audio to text, and adds this text as a caption to the generated GIF. The main components of the project include video processing, audio extraction, speech recognition, and GIF creation.
+My project, "Video to GIF Converter" is a web application built using Flask that allows users to upload a video file and convert it into a GIF. The application also extracts the audio from the video, uses speech recognition to convert the audio to text, and adds this text as a caption to the generated GIF. The main components of the project include video processing, audio extraction, speech recognition, and GIF creation.
 
 What the Project Does
 
