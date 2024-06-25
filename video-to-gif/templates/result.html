@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated GIFs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1503432692467-71a6efcd566d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        .container {
+            max-width: 90%;
+            height: auto;
+            margin: 20px auto;
+            background-image: linear-gradient(to bottom, #716bd1, #5961b4, #465696, #384a79, #2f3d5b, #2d334a, #282a39, #222229, #1d1b20, #171417, #0e0b0d, #000000);
+            padding: 20px;
+            border-radius: 35px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+            gap: 20px;
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Generated GIFs</h1>
+        </div>
+        <div class="grid">
+            {% for gif in gifs %}
+                <div class="grid-item">
+                    <img src="{{ gif }}" alt="Generated GIF">
+                    <a href="{{ url_for('download_file', filename=gif.split('/')[-1]) }}" class="btn">Download</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
